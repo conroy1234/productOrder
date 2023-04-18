@@ -42,6 +42,7 @@ public class OrderController {
     @GetMapping("/fictional/organisation/product/{productId}")
     Product findProduct(@PathVariable String productId){
         return productService.findById(productId).get();
+        //test
     }
 
     @PostMapping("/fictional/organisation/order/{productId}")
