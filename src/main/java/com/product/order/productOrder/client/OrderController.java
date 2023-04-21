@@ -50,7 +50,8 @@ public class OrderController {
        Order entity = orderService.saveOrder(productId);
        logger.info("order has been created....",entity);
        if(entity==null) {
-    	  throw new RuntimeException("empty request"); 
+    	  throw new RuntimeException("empty request");
+
        }
        URI location = ServletUriComponentsBuilder.fromCurrentRequest()
                .path("/{id}")
